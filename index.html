@@ -6,43 +6,45 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./script.js"></script>
     <title>Docu</title>
 </head>
 <body>
       <div class="jumbotron text-center">
-        <div class="header">
-          <h1>
+        <div class="header">          <h1>
             Title
           </h1>
       </div>
     </div>
 
- <div class="container">
+ 
+  <div class="container">
    <div class="row">
-    <span class="border">
-     <div class="col-lg-6 mb-4">
-         <h1>
-         Heartbeat
-        </h1>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          </div>
-     </div>
-     </span>
-
-     <span class="border">
+       <div class="col-lg-6">
+           <div id="heartbeat-img">
+             Heartbeat IMG
+          <//div>div>
+         
+    <div id="volume-container">
      <div class="col-lg-6">
-          <h1>
-         Volume
-          </h1>
-          <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          </div>
-          </div>
-      </div>
-     </span>
+            <h1>
+               Spotify Volume
+            </h1>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              </div>
+             <h1>
+               Heartbeat Volume
+             </h1>
+               <div class="slidecontainer">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+               </div>
+               <div id="output11">1</div>
+        </div>
     </div>
    </div>
+  </div>
   
 
     <footer class="page-footer font-small ">
