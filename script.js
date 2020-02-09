@@ -49,6 +49,5 @@ $(document).on('change', '#myRange', function() {
 $(document).on('change', '#myRange2', function() {
   var heartBeatVolume = ($(this).val()/100);
   $('#output12').html(heartBeatVolume);
-  console.log("HB volume: " + heartBeatVolume);
-  
+  console.log("HB volume: " + heartBeatVolume); 
 });
