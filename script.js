@@ -26,26 +26,29 @@
    console.log('Device ID has gone offline', device_id);
    });
 
-  // Connect to the player!
+//   // Connect to the player!
   player.connect();
  };
 
 // Im just trying stuff here
- var slider = $("#myRange");
 
- var sliderinput = slider.val();
-
- slider.oninput = function() {
-  $("#output11").html(inputslider);
- };
+$(document).on('change', '#myRange', function() {
+  $('#output11').html( $(this).val() );
+  var spotifyVolume = $(this).val();
+  console.log("S volume:" + spotifyVolume);
+  // var myUrl = "https://api.spotify.com/v1/me/player/volume?volume_percent="+ spotifyVolume +"";
+  //  $.ajax({
+  //   headers: {
+  //     "Authorization": "Bearer" + btoa("BQDJwB3lWOco2R-cr49-g1jhww-m0bZG0jYkQ5-5bSlf35vptqfcE4heQfx0J9nDryDdPEU0bwzh6P93qLBeJg70jJrEu_XPUXY6x9AHKldDf-j05ZtpELXlz8qyhIHrzaE6GU07yxJaRT7m2zt1S5Lu5mIHqiDR")
+  //   },
+  //   url: myUrl,
+  //   method: "PUT"
+  // });
+});
  
- 
-//  $.ajax({
-//   headers: {
-//       'Authorization': 'Basic ' + btoa('myuser:mypswd'),
-//       'Order-Num': 123
-//   },
-//   url: myUrl,
-//   method: "PUT"
+$(document).on('change', '#myRange2', function() {
+  var heartBeatVolume = ($(this).val()/100);
+  $('#output12').html(heartBeatVolume);
+  console.log("HB volume: " + heartBeatVolume);
   
-// });
+});
