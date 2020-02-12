@@ -4,7 +4,13 @@
     color: white;
 }
 
+#Headingtxt {
+    color: red;
+    font-weight: none;
+    font-style: oblique;
+    font-family: "Times New Roman", Times, Sans-serif;
 
+}
 
 #wrap {
     background: grey;
@@ -20,11 +26,19 @@
 
 }
 
+#myRange, #myRange2 {
+  outline: 2px solid black
+}
+
+#output11, #output12{
+  
+}
+
 
 #heartBeat-img {
     height: 200px;
     width: 200px;
-  display: inline-block; 
+  display: inline-block;
 }
 
 .card {
