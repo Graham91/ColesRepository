@@ -1,19 +1,41 @@
-.header {
+.jumbotron {
+    text-align: center;
+    background-color: grey!important;
+    color: white;
+}
+
+
+
+#wrap {
+    background: grey;
+    padding: 5%;
+    text-align: center;
+    width: 80%;  
+    margin:auto;
+}
+
+ #volume {
+     background: #ccc;
+     display: inline-block;   
 
 }
 
-.row {
-  
+
+#heartBeat-img {
+    height: 200px;
+    width: 200px;
+  display: inline-block; 
 }
 
-#heartbeat-img {
-    
+.card {
+    margin: 0 auto;
+    background-color: blue;
+    width: 900px;
+    margin-top: 40px;
+    padding: 35px;
+    text-align: center;
+    color: white;
 }
-
-#volume-container {
-  
-}
-
 
 .slidecontainer {
     width: 100%;
@@ -53,10 +75,7 @@
 #iframebox{
     margin-bottom: 50px;
 }
-#iframebox{
-    margin-bottom: 50px;
+#centerbox{
+  background-color: lightgrey;
+  padding: 20px;
 }
-#iframebox{
-    margin-bottom: 50px;
-}
-
