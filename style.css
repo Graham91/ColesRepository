@@ -9,7 +9,6 @@
     font-weight: none;
     font-style: oblique;
     font-family: "Times New Roman", Times, Sans-serif;
-
 }
 
 #wrap {
@@ -34,6 +33,15 @@
   
 }
 
+.card {
+    margin: 0 auto;
+    background-color: blue;
+    width: 900px;
+    margin-top: 40px;
+    padding: 35px;
+    text-align: center;
+    color: white;
+}
 
 #heartBeat-img {
     height: 200px;
@@ -89,6 +97,7 @@
 #iframebox{
     margin-bottom: 50px;
 }
+
 #centerbox{
   background-color: lightgrey;
   padding: 20px;

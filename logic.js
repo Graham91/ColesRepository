@@ -54,10 +54,12 @@ window.onSpotifyWebPlaybackSDKReady = () => {
  //escape :wq
  var audio = new Audio("https://cdn.glitch.com/3264852e-68ba-479c-a7bc-5383a47d9171%2Fdrumbeat%20(1).mp3?v=1581464866105");
  
+
  $(document).on("click",  function(){
 
    console.log("hi");
    playheartbeat();
+
  });
  
  function playheartbeat(){
@@ -66,4 +68,3 @@ window.onSpotifyWebPlaybackSDKReady = () => {
    audio.play();}, 2000);
    console.log(audio.duration)
  };
-
