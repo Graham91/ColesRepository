@@ -45,9 +45,24 @@ $(document).on('change', '#myRange', function() {
   //   method: "PUT"
   // });
 });
- 
+ var heartBeatVolume = .50;
 $(document).on('change', '#myRange2', function() {
-  var heartBeatVolume = ($(this).val()/100);
+  heartBeatVolume = ($(this).val()/100);
+  audio.volume = heartBeatVolume;
+  playheartbeat();
   $('#output12').html(heartBeatVolume);
   console.log("HB volume: " + heartBeatVolume); 
 });
+//escape :wq
+var audio = new Audio("https://cdn.glitch.com/3264852e-68ba-479c-a7bc-5383a47d9171%2Fdrumbeat%20(1).mp3?v=1581464866105");
+
+$("#heartbeat12").on("click", function(){
+playheartbeat();
+  console.log("hi");
+});
+
+function playheartbeat(){
+  //audio.volume = heartBeatVolume;
+setInterval(function(){ 
+  audio.play();}, 2000);
+};
