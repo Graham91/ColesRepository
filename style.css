@@ -1,0 +1,29 @@
+.jumbotron {
+    text-align: center;
+    background-color: grey!important;
+    color: white;
+}
+
+#wrap {
+    background: grey;
+    padding: 5%;
+    text-align: center;
+    width: 80%;  
+    margin:auto;
+}
+
+#heartBeatimg, #volume {
+     background: #ccc;
+     display: inline-block;    
+
+}
+
+.card {
+    margin: 0 auto;
+    background-color: blue;
+    width: 900px;
+    margin-top: 40px;
+    padding: 35px;
+    text-align: center;
+    color: white;
+}
