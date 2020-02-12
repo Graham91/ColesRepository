@@ -6,6 +6,9 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./script.js"></script>
     <title>Docu</title>
 </head>
 <body>
@@ -17,46 +20,48 @@
       </div>
     </div>
 
- <div class="container">
+ 
+  <div class="container">
    <div class="row">
-    <span class="border">
-     <div class="col-lg-6 mb-4">
-         <h1>
-         Heartbeat
-        </h1>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+       <div class="col-lg-4">
+           <div id="heartbeat-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTT9jzfQQHRFGa924qGTuDE6aKeBMNTas1Ru2fj1PIDOmDnsSBM" alt="heartbeat-img">
           </div>
-     </div>
-     </span>
-
-     <span class="border">
+         <button id="heartbeat12">heartbeat</button>
+    <div id="volume-container">
      <div class="col-lg-6">
-          <h1>
-         Volume
-          </h1>
-          <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          </div>
-          </div>
-      </div>
-     </span>
+            <h1>
+               Spotify Volume
+            </h1>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              </div>
+             <h1>
+               Heartbeat Volume
+             </h1>
+               <div class="slidecontainer">
+                  <input type="range" min="0" max="100" value="50" class="slider" id="myRange2">
+               </div>
+               <div id="output11">50</div>
+               <div id="output12">.5</div>
+        </div>
     </div>
    </div>
+  </div>
   
 
     <footer class="page-footer font-small ">
       <div class="row">
-        <div class="col-md-12 padding: 30px container-fluid text-center">
+        <div id="iframebox" class="col-md-12 padding: 30px container-fluid text-center">
           <h1>
             Spotify
           </h1>
-          <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO" width="1000" height="300" frameborder="10" allowtransparency="true" allow="encrypted-media"></iframe>
+          <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO" width="100%" height="300" frameborder="10" allowtransparency="true" allow="encrypted-media"><iframe>
         </div>
       </div>
   </footer>
     
-    
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  </div>
+    <script src="https://sdk.scdn."></script>
 </body>
 </html>
