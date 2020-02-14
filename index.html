@@ -6,22 +6,32 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- jquery links -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- firebase links -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
    
-    <title>Docu</title>
+    <title>heartBeat</title>
 </head>
 <body>
 
 <div class="jumbotron" id="Headingtxt">
-    <h1>Graham is a genius</h1>
+  <div id="innertextdiv" class="heartbeatsong">
+<h1>This is my Heart Beat Song</h1>
+  </div>  
 </div>
+<div class="backgroundimage" >
+  
 
-<div id="wrap">
+<div id="wrap" class="outsidediv">
     <div class="container-fluid">
         <div class="row" id="centerbox">
             <div class="col-lg-6" >
+              <a href="#about" class="heart">
                 <img src="https://pngimg.com/uploads/heart/heart_PNG51341.png" id="heartBeat-img">
+              </a>
             </div>
             <div class="col-lg-6" id="volume">
                 <h2>Spotify Volume</h2>
@@ -49,15 +59,30 @@
 </div>
 
 <div>
-    <div class="card-body">
+    <div class="card-body gettingridofpadding">
       <div id="iframebox" class="col-md-12 padding: 30px container-fluid text-center">
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO" width="100%" height="300" frameborder="10" allowtransparency="true" allow="encrypted-media">
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO" width="87%" height="300" frameborder="10" allowtransparency="true" allow="encrypted-media" id="iframecss">
           </iframe>
       </div>
     </div>
   </div>
+   </div>
 <script src="./script.js"></script>
 <script src="https://sdk.scdn.co/spotify-player.js"></script>  
+<script type="text/javascript">
+   
+   function heartbeatanimation(){
+   $(document).ready(function animateHeart() {
+        $('#heartBeat-img').animate({ height: "250px", width: "250px" });
+        $('#heartBeat-img').animate({ height: "200px", width: "200px" });
+      });
+    }
+           
+          
+    //       fontSize: $('.heart').css('fontSize') == '70px' ? '65px' : '70px'
+    //     }, 500, animateHeart);
+    // });
+    </script>
       
 </body>
 </html>
