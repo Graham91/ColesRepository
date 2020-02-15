@@ -42,19 +42,24 @@ body{background-color: rgb(252, 250, 250);}
 }
 
 #myRange, #myRange2 {
-  outline: 2px solid black
-}
-
-#output11, #output12{
-  
+  outline: 4px solid black
 }
 
 
 #heartBeat-img {
     height: 200px;
     width: 200px;
-  display: inline-block;
+ display: inline-block; 
+  padding: 10px;
+  z-index: 1;
+  text-align:center;
 }
+.heart1{
+  position: relative;
+  height: 250px;
+  text-align:center;
+}
+
 
 .card {
     margin: 0 auto;
@@ -120,7 +125,7 @@ body{background-color: rgb(252, 250, 250);}
   border-image: url('https://cdn.glitch.com/3264852e-68ba-479c-a7bc-5383a47d9171%2Fpillars3.png?v=1581565796481');
   border-image-slice: 200;
   border-image-repeat:stretch;
-  border-image-height: stretch;
+
 }
 html, body {
     margin: 0;
