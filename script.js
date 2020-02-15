@@ -42,7 +42,7 @@ var ref = database.ref();
 ref.on("value", function (snapshot) {
   var newobject = snapshot.val();
   console.log(snapshot.val());
-  console.log(newobject.Child1.time);
+  console.log(newobject.A);
   
 });
 
@@ -64,7 +64,7 @@ var heartBeatVolume = .50;
 $(document).on('change', '#myRange2', function () {
   heartBeatVolume = ($(this).val() / 100);
   audio.volume = heartBeatVolume;
-  playheartbeat();
+  playheartbeat(1000, 1.79);
   $('#output12').html(heartBeatVolume);
   console.log("HB volume: " + heartBeatVolume);
 });
@@ -74,34 +74,83 @@ var audio2 = new Audio("https://cdn.glitch.com/3264852e-68ba-479c-a7bc-5383a47d9
 var onswitch = true;
 var switchon2 = true;
 $(document).on("click", "#heartBeat-img", function () {
-  playheartbeat();
+  playheartbeat(857, 2.15);
   console.log("hi");
+
+  var heartrate = 875;
+  var switchingvariable = 0;
+  var speedinterval=2.15;
+
+  
+  setInterval(function () {
+   
+    ref.on("value", function (snapshot) {
+      var newobject = snapshot.val();
+      console.log(snapshot.val());
+      var arrayofchildern =[newobject.A.value,newobject.B.value,newobject.C.value,newobject.D.value,newobject.E.value,newobject.F.value,newobject.G.value,]
+      console.log(arrayofchildern);
+      var firebaseheartrate = arrayofchildern[switchingvariable];
+      heartrate = (Math.floor(6000/(newobject.A.value)*10));
+      var number12 = (firebaseheartrate*.36)/10;
+
+      switchingvariable++;
+speedinterval = number12+1-1.37;
+console.log(speedinterval);
+    })
+    playheartbeat(heartrate, speedinterval);
+  }
+,10000);
 });
 $(".heartbeatsong").on("click", function () {
   if (onswitch === true) {
+    clearInterval();
     audio2.play();
     onswitch = false;
   }
   else {
+    clearInterval();
     audio2.pause();
     onswitch = true;
   }
 
 });
-
-function playheartbeat() {
+var heartbeatisplaying = false
+function playheartbeat(intervaltime, playbackrate1) {
   //audio.volume = heartBeatVolume;
-  setInterval(function () {
-   
-    heartbeatanimation()
-    audio.play();
-    console.log("on")
-  }, 2000);
-
+  if (heartbeatisplaying === false) {
+    heartbeatisplaying = true
+    setInterval(function () {
+      audio.playbackRate = playbackrate1;
+      heartbeatanimation();
+      audio.play();
+      console.log("on")
+    }, intervaltime);
+  }
 
 }
+function heartbeatanimation(){
+     clearInterval();
+   $(document).ready(function animateHeart() {
+        $('#heartBeat-img').animate({ height: "250px", width: "250px" },{duration:100});
+        $('#heartBeat-img').animate({ height: "200px", width: "200px" },{duration:100});
+      });
+    }
+
+  
 // function animateheart(){
-
-
+//1.79/2.15 = ratio
+// ratio * bmp/70
+// var number1= (8325/1000) ‬* (60/70)
+// console.log((8325/1000)‬*(60/70));
+// 0.8325581395348837
+//every ten bpm intervaltime increases by .36 
+//10/60 = 36/100
+//beateperminuet .36
 // };
+//1.79 audio play every sec or 60 beats per minuet
+//2.15 audio plays at 70 beats per sec
+// 80 per minute
+//  10 beats the audios speed need the 
+//y = .36/10(70)-.37
+
 
