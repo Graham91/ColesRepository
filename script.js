@@ -87,7 +87,7 @@ $(document).on("click", "#heartBeat-img", function () {
     ref.on("value", function (snapshot) {
       var newobject = snapshot.val();
       console.log(snapshot.val());
-      var arrayofchildern =[newobject.A.value,newobject.B.value,newobject.C.value,newobject.D.value,newobject.E.value,newobject.F.value,newobject.G.value,]
+      var arrayofchildern =[newobject.A.value,newobject.B.value,newobject.C.value,newobject.D.value,newobject.E.value,newobject.F.value,newobject.G.value,newobject.H.value,newobject.I.value]
       console.log(arrayofchildern);
       var firebaseheartrate = arrayofchildern[switchingvariable];
       heartrate = (Math.floor(6000/(newobject.A.value)*10));
